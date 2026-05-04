@@ -116,7 +116,7 @@ class Tree:
 def decode(n: int) -> Tree:
     """Decode the Matula-Goebel number *n* into its rooted tree."""
     if n == 1:
-        return Tree()  # single vertex / the void leaf
+        return Tree()  # single isolated vertex (leaf node, no children)
     # Factorize n; each prime factor p (with multiplicity) contributes a child
     # whose Matula number is prime_index(p).
     children: List[Tree] = []
@@ -226,10 +226,13 @@ def print_forest_summary(factors: Dict[int, int]) -> None:
     print(f"  Total nodes across all tree copies: {total_nodes}")
     print(f"  Total edges across all tree copies: {total_edges}")
     print(
-        f"\n  Note: 'Total edges = {total_edges}' is close to (but not) 194"
-        " (the number of Monster conjugacy classes)."
-        "\n  The document matula_monster_insights.md reports this value as 196,"
-        "\n  which arises from slightly different counting conventions."
+        f"\n  Note: 'Total edges = {total_edges}' is within 2 of the 194"
+        " conjugacy classes of the Monster."
+        "\n  This value is the weighted sum: for each prime p with exponent e,"
+        "\n  we count tree.edges(p) * e, where tree.edges(p) is the number of"
+        "\n  edges in the rooted tree encoded by the Matula number p."
+        "\n  The value 196 is what matula_monster_insights.md calls the"
+        "\n  'total tree complexity' of the Monster's order."
     )
 
 

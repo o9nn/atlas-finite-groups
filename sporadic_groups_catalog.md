@@ -166,7 +166,7 @@ Three exact matches and two near-misses at ±2 are the basis for the
    order, from Σ = 8 for M11 up to Σ = 95 for the Monster.
 
 3. **The k = 6 cluster**: Nine of the 26 sporadic groups share hyper-tree order 6.
-   This is the richest stratum, containing four of the five Conway groups (Co2,
+   This is the richest stratum, containing two of the three Conway groups (Co2,
    Co3) and several Fischer groups (Fi22).
 
 4. **Missing orders**: No sporadic group has *k* ∈ {12, 13, 14}. The jump from

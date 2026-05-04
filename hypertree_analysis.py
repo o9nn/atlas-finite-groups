@@ -213,7 +213,7 @@ def main() -> None:
     print(f"\nMonster hyper-tree order: {len(monster_factors)}")
     print(f"Monster hyper-tree signature: {sig}")
     print(f"Sum of exponents: {sum(sig)}")
-    print(f"Total edges in Matula forest: {sum(p * e for p, e in monster_factors.items())}")
+    print("(For weighted Matula-forest edge totals, run matula_monster_analysis.py)")
 
 
 if __name__ == "__main__":
